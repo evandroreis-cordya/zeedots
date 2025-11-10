@@ -1,16 +1,37 @@
 # Zeedots
 
+```text
+███████╗███████╗███████╗██████╗  ██████╗ ████████╗███████╗
+╚══███╔╝██╔════╝██╔════╝██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝
+  ███╔╝ █████╗  █████╗  ██║  ██║██║   ██║   ██║   ███████╗
+ ███╔╝  ██╔══╝  ██╔══╝  ██║  ██║██║   ██║   ██║   ╚════██║
+███████╗███████╗███████╗██████╔╝╚██████╔╝   ██║   ███████║
+╚══════╝╚══════╝╚══════╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
+                                                          |
+```
+
 This repository contains Zeedots, the configuration files and scripts I use to customize my development environment. These files help me maintain a consistent setup across different machines and save time when setting up new environments.
+
+> Shout-out to [Hendrik](https://github.com/hendrikmi) and [Josean Martinez](https://github.com/josean-dev) for inspiring large parts of this setup and documentation.
 
 ## Essential Tools
 
-- **Editor**: [NeoVim](https://neovim.io/). As a fallback, I have a basic standard [Vim](https://www.vim.org/) config that provides 80% of the functionality of my NeoVim setup without any dependencies for maximum portability and stability.
-- **Multiplexer**: [Tmux](https://github.com/tmux/tmux/wiki)
-- **Main Terminal**: [WezTerm](https://wezfurlong.org/wezterm/index.html)
-- **Shell Prompt**: [Starship](https://starship.rs/)
+- **Editor**: [NeoVim](https://neovim.io/) with a curated plugin set and Lazy config under `configs/config/nvim`. A lightweight [Vim](https://www.vim.org/) profile lives alongside it for portability.
+- **Terminals**: [WezTerm](https://wezfurlong.org/wezterm/index.html) is the daily driver, while a full [Kitty](https://sw.kovidgoyal.net/kitty/) profile ships in `configs/config/kitty` for GPU-accelerated sessions.
+- **Multiplexer**: [Tmux](https://github.com/tmux/tmux/wiki) with shortcuts, theming, and plugins managed via `configs/config/tmux`.
+- **Shell Experience**: [Zsh](https://www.zsh.org/) plus [Starship](https://starship.rs/) prompt, aliases, and completions in `configs/config/zsh` and `configs/config/starship`.
 - **Color Theme**: All themes are based on the [Nord color palette](https://www.nordtheme.com/docs/colors-and-palettes). Themes can be easily switched via environment variables set in `.zshenv`.
-- **Window Management**: [Rectangle](https://github.com/rxhanson/Rectangle) for resizing windows, paired with [Karabiner-Elements](https://karabiner-elements.pqrs.org/) for switching between applications.
-- **File Manager**: [Ranger](https://github.com/ranger/ranger)
+- **Window Management**: [Rectangle](https://github.com/rxhanson/Rectangle) for resizing windows, paired with [Karabiner-Elements](https://karabiner-elements.pqrs.org/) for switching between applications. Configs are provisioned under `configs/symlinks/rectangle` and `configs/config/karabiner`.
+- **File Manager**: [Ranger](https://github.com/ranger/ranger) with preview scripts and bookmarks stored in `configs/config/ranger`.
+
+### Additional Managed Tooling
+
+Beyond the core workflow, Zeedots installs and maintains:
+
+- **AI & IDE Enhancements**: Configs for [Cursor](https://cursor.sh/) (`configs/cursor`), Claude desktop (`configs/claude`), and LM Studio (`configs/lmstudio`) are symlinked from `scripts/symlinks/stow-packages.conf`.
+- **Knowledge & Docs**: Obsidian vault preferences (`configs/obsidian`) and Storybook settings (`configs/storybook`) ensure documentation stays synced.
+- **Data & Cloud**: DBeaver profiles (`configs/dbeaver`), Docker daemon defaults (`configs/docker`), and Kubernetes contexts (`configs/kube`) land in place during install alongside tight SSH integration (`configs/ssh/1Password`).
+- **Automation**: `scripts/homebrew/Brewfile` orchestrates an extensive suite of CLI tools, GUI apps, and VS Code extensions so fresh machines match the primary workstation.
 
 ## Custom Window Management
 
