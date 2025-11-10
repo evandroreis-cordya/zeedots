@@ -1,8 +1,6 @@
-# Dotfiles
+# Zeedots
 
-This repository contains my dotfiles, which are the config files and scripts I use to customize my development environment. These files help me maintain a consistent setup across different machines and save time when setting up new environments.
-
-![screenshot](img/nvim-demo.png)
+This repository contains Zeedots, the configuration files and scripts I use to customize my development environment. These files help me maintain a consistent setup across different machines and save time when setting up new environments.
 
 ## Essential Tools
 
@@ -42,35 +40,57 @@ Holding `Tab + E` enables an exposé layer, where other keys become shortcuts to
 
 ## Setup
 
-To set up these dotfiles on your system, run:
+To set up Zeedots on your system, run:
 
 ```bash
-./install.sh
+./install.zsh
 ```
 
-Then follow the on-screen prompts.
+The installer will:
+
+- Prompt for the directory where configuration files should live (defaults to `~/dots`) and expose it through the `ZEEDOTS_ROOT` environment variable.
+- Copy the `configs/` tree into that directory (see `scripts/install_configs.zsh` for details).
+- Create manual symlinks listed in `scripts/symlinks/symlinks.conf`.
+- Apply GNU Stow packages defined in `scripts/symlinks/stow-packages.conf` from the chosen root.
+
+You can re-run the symlink step at any time:
+
+```bash
+ZEEDOTS_ROOT=~/dots ./scripts/symlinks.zsh --create
+```
+
+If you installed the configs elsewhere, replace `~/dots` with your custom path or pass `--root /custom/path`.
+
+## Symlink Configuration
+
+- `scripts/symlinks/symlinks.conf` contains explicit `source:target` entries for paths that cannot be managed by Stow (for example items under `~/Library`).
+- `scripts/symlinks/stow-packages.conf` lists the Stow packages that will be applied from `ZEEDOTS_ROOT`. Each entry should match a directory inside the root (e.g. `.config`, `.zsh`).
+
+To inspect what Stow will do, run:
+
+```bash
+ZEEDOTS_ROOT=~/dots stow --dir "$ZEEDOTS_ROOT" --target "$HOME" --verbose --simulate $(cat scripts/symlinks/stow-packages.conf | tr '\n' ' ')
+```
 
 ## Uninstalling
 
-If you ever want to remove the symlinks created by the installation script, you can use the provided symlinks removal script:
-
-To delete all symlinks created by the installation script, run:
+To remove the symlinks that were created during setup, run:
 
 ```bash
-./scripts/symlinks.sh --delete
+ZEEDOTS_ROOT=~/dots ./scripts/symlinks.zsh --delete
 ```
 
-This will remove the symlinks but will not delete the actual configuration files, allowing you to easily revert to your previous configuration if needed.
+Add `--include-files` if you also want to delete regular files listed in `symlinks.conf` alongside their symlinks. Stow only removes the symlinks it created; the copied configuration directory remains intact so you can reinstall later.
 
-## Adding New Dotfiles and Software
+## Adding New Zeedots Components and Software
 
-### Dotfiles
+### Zeedots Files
 
-When adding new dotfiles to this repository, follow these steps:
+When adding new Zeedots files to this repository, follow these steps:
 
-1. Place your dotfile in the appropriate location within the repository.
-2. Update the `symlinks.conf` file to include the symlink creation for your new dotfile.
-3. If necessary, update the `install.sh` script to set up the software.
+1. Place your Zeedots file in the appropriate location within the repository.
+2. Update the `symlinks.conf` file to include the symlink creation for your new Zeedots file.
+3. If necessary, update the `install.zsh` script to set up the software.
 
 ### Software Installation
 

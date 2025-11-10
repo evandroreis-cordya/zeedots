@@ -17,6 +17,8 @@ install_configs() {
         target_root="$default_root"
     fi
 
+    typeset -gx ZEEDOTS_ROOT="$target_root"
+
     info "Installing configuration files to $target_root"
     mkdir -p "$target_root" || {
         error "Unable to create or access $target_root"

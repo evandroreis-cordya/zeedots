@@ -7,9 +7,9 @@
 . scripts/install_configs.zsh
 . scripts/symlinks.zsh
 
-info "Dotfiles intallation initialized..."
+info "Zeedots installation initialized..."
 read -p "Install apps? [y/n] " install_apps
-read -p "Overwrite existing dotfiles? [y/n] " overwrite_dotfiles
+read -p "Overwrite existing Zeedots files? [y/n] " overwrite_zeedots
 
 if [[ "$install_apps" == "y" ]]; then
     printf "\n"
@@ -59,10 +59,10 @@ info "Symbolic Links"
 info "===================="
 
 chmod +x ./scripts/symlinks.zsh
-if [[ "$overwrite_dotfiles" == "y" ]]; then
-    warning "Deleting existing dotfiles..."
+if [[ "$overwrite_zeedots" == "y" ]]; then
+    warning "Deleting existing Zeedots files..."
     ./scripts/symlinks.zsh --delete --include-files
 fi
 ./scripts/symlinks.zsh --create
 
-success "Dotfiles set up successfully."
+success "Zeedots set up successfully."
