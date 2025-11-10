@@ -8,7 +8,7 @@ SCRIPT_DIR="${SCRIPT_PATH:h}"
 . "$SCRIPT_DIR/utils.zsh"
 
 install_configs() {
-    local default_root="$HOME/dots"
+    local default_root="$HOME/zeedots"
     local target_root
 
     printf "Enter root directory for configuration files [%s]: " "$default_root"

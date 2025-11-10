@@ -1,13 +1,14 @@
 # Zeedots
 
 ```text
-███████╗███████╗███████╗██████╗  ██████╗ ████████╗███████╗
-╚══███╔╝██╔════╝██╔════╝██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝
-  ███╔╝ █████╗  █████╗  ██║  ██║██║   ██║   ██║   ███████╗
- ███╔╝  ██╔══╝  ██╔══╝  ██║  ██║██║   ██║   ██║   ╚════██║
-███████╗███████╗███████╗██████╔╝╚██████╔╝   ██║   ███████║
-╚══════╝╚══════╝╚══════╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
-                                                          |
+ ███████████                       █████           █████           
+░█░░░░░░███                       ░░███           ░░███            
+░     ███░    ██████   ██████   ███████   ██████  ███████    █████ 
+     ███     ███░░███ ███░░███ ███░░███  ███░░███░░░███░    ███░░  
+    ███     ░███████ ░███████ ░███ ░███ ░███ ░███  ░███    ░░█████ 
+  ████     █░███░░░  ░███░░░  ░███ ░███ ░███ ░███  ░███ ███ ░░░░███
+ ███████████░░██████ ░░██████ ░░████████░░██████   ░░█████  ██████ 
+░░░░░░░░░░░  ░░░░░░   ░░░░░░   ░░░░░░░░  ░░░░░░     ░░░░░  ░░░░░░  
 ```
 
 This repository contains Zeedots, the configuration files and scripts I use to customize my development environment. These files help me maintain a consistent setup across different machines and save time when setting up new environments.
@@ -69,7 +70,7 @@ To set up Zeedots on your system, run:
 
 The installer will:
 
-- Prompt for the directory where configuration files should live (defaults to `~/dots`) and expose it through the `ZEEDOTS_ROOT` environment variable.
+- Prompt for the directory where configuration files should live (defaults to `~/zeedots`) and expose it through the `ZEEDOTS_ROOT` environment variable.
 - Copy the `configs/` tree into that directory (see `scripts/install_configs.zsh` for details).
 - Create manual symlinks listed in `scripts/symlinks/symlinks.conf`.
 - Apply GNU Stow packages defined in `scripts/symlinks/stow-packages.conf` from the chosen root.
@@ -77,10 +78,10 @@ The installer will:
 You can re-run the symlink step at any time:
 
 ```bash
-ZEEDOTS_ROOT=~/dots ./scripts/symlinks.zsh --create
+ZEEDOTS_ROOT=~/zeedots ./scripts/symlinks.zsh --create
 ```
 
-If you installed the configs elsewhere, replace `~/dots` with your custom path or pass `--root /custom/path`.
+If you installed the configs elsewhere, replace `~/zeedots` with your custom path or pass `--root /custom/path`.
 
 ## Symlink Configuration
 
@@ -90,7 +91,7 @@ If you installed the configs elsewhere, replace `~/dots` with your custom path o
 To inspect what Stow will do, run:
 
 ```bash
-ZEEDOTS_ROOT=~/dots stow --dir "$ZEEDOTS_ROOT" --target "$HOME" --verbose --simulate $(cat scripts/symlinks/stow-packages.conf | tr '\n' ' ')
+ZEEDOTS_ROOT=~/zeedots stow --dir "$ZEEDOTS_ROOT" --target "$HOME" --verbose --simulate $(cat scripts/symlinks/stow-packages.conf | tr '\n' ' ')
 ```
 
 ## Uninstalling
@@ -98,7 +99,7 @@ ZEEDOTS_ROOT=~/dots stow --dir "$ZEEDOTS_ROOT" --target "$HOME" --verbose --simu
 To remove the symlinks that were created during setup, run:
 
 ```bash
-ZEEDOTS_ROOT=~/dots ./scripts/symlinks.zsh --delete
+ZEEDOTS_ROOT=~/zeedots ./scripts/symlinks.zsh --delete
 ```
 
 Add `--include-files` if you also want to delete regular files listed in `symlinks.conf` alongside their symlinks. Stow only removes the symlinks it created; the copied configuration directory remains intact so you can reinstall later.

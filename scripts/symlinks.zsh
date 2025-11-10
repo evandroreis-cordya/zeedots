@@ -7,7 +7,7 @@ SCRIPT_DIR="${SCRIPT_PATH:h}"
 
 CONFIG_FILE="$SCRIPT_DIR/symlinks/symlinks.conf"
 STOW_PACKAGES_FILE="$SCRIPT_DIR/symlinks/stow-packages.conf"
-DEFAULT_STOW_ROOT="$HOME/dots"
+DEFAULT_STOW_ROOT="$HOME/zeedots"
 
 . "$SCRIPT_DIR/utils.zsh"
 
