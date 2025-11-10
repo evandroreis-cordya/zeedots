@@ -8,17 +8,8 @@ SCRIPT_DIR="${SCRIPT_PATH:h}"
 . "$SCRIPT_DIR/utils.zsh"
 
 install_configs() {
-    local default_root="$HOME/zeedots"
-    local target_root
-
-    printf "Enter root directory for configuration files [%s]: " "$default_root"
-    read -r target_root
-    if [[ -z "$target_root" ]]; then
-        target_root="$default_root"
-    fi
-
-    typeset -gx ZEEDOTS_ROOT="$target_root"
-
+    local target_root="${1:-$HOME}"
+    
     info "Installing configuration files to $target_root"
     if ! mkdir -p "$target_root"; then
         error "Unable to create or access $target_root"
@@ -68,6 +59,6 @@ install_configs() {
 }
 
 if [[ "$SCRIPT_PATH" == "${0:A}" ]]; then
-    install_configs
+    install_configs "$@"
 fi
 

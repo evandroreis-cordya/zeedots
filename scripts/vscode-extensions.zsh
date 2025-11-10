@@ -20,8 +20,6 @@ install_vscode_extensions() {
         amazonwebservices.amazon-nova-act-extension
         amazonwebservices.aws-toolkit-vscode
         anthropic.claude-code
-        anysphere.cursorpyright
-        anysphere.remote-containers
         asvetliakov.vscode-neovim
         bierner.markdown-mermaid
         codezombiech.gitignore
