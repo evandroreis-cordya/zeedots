@@ -2,7 +2,11 @@
   "mcpServers": {
     "MCP_DOCKER": {
       "command": "docker",
-      "args": ["mcp", "gateway", "run"],
+      "args": [
+        "mcp",
+        "gateway",
+        "run"
+      ],
       "env": {
         "MCP_DOCKER": "true",
         "MCP_DOCKER_GATEWAY": "http://localhost:3000"
@@ -10,8 +14,10 @@
     },
     "figma": {
       "command": "npx",
-      "args": ["-y", "@figma/mcp-server-figma"],
+      "args": [
+        "-y",
+        "@figma/mcp-server-figma"
+      ]
     }
   }
 }
-

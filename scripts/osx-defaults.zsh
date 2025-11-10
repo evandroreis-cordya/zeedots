@@ -7,6 +7,18 @@ SCRIPT_DIR="${SCRIPT_PATH:h}"
 
 . "$SCRIPT_DIR/utils.zsh"
 
+register_keyboard_shortcuts() {
+    info "Registering macOS keyboard shortcuts..."
+
+    if ! command -v defaults >/dev/null 2>&1; then
+        warning "defaults CLI not available; skipping keyboard shortcut registration."
+        return 0
+    fi
+
+    # Placeholder for custom keyboard shortcut registrations. Extend as needed.
+    info "No custom keyboard shortcuts defined; skipping."
+}
+
 apply_osx_system_defaults() {
     info "Applying OSX system defaults..."
 

@@ -1,7 +1,4 @@
 [
-  // === Explorer ===
-  //
-  // Exit explorer with CTRL+l
   {
     "key": "ctrl+l",
     "command": "workbench.action.navigateRight",
@@ -10,9 +7,8 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "sideBarFocus",
+    "when": "sideBarFocus"
   },
-  // Toggle and focus explorer
   {
     "key": "shift+ctrl+e",
     "command": "-workbench.view.explorer"
@@ -26,7 +22,6 @@
     "key": "ctrl+shift+e",
     "when": "editorTextFocus"
   },
-  // Rename files
   {
     "key": "r",
     "command": "renameFile",
@@ -37,7 +32,6 @@
     "command": "-renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  // Create new files and folders
   {
     "key": "a",
     "command": "explorer.newFile",
@@ -48,7 +42,6 @@
     "command": "explorer.newFolder",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  // Copy, paste and cut files
   {
     "key": "y",
     "command": "filesExplorer.copy",
@@ -64,21 +57,16 @@
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
-  // Delete files
   {
     "key": "d",
     "command": "deleteFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
-  // Open files to side
   {
     "key": "v",
     "command": "explorer.openToSide",
     "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
   },
-  //
-  // === Submenu navigation ===
-  //
   {
     "key": "ctrl+j",
     "command": "selectNextSuggestion",
@@ -139,9 +127,6 @@
     "command": "list.toggleExpand",
     "when": "!inputFocus"
   },
-  //
-  // === Terminal ===
-  //
   {
     "key": "ctrl+t",
     "command": "workbench.action.togglePanel"
@@ -171,10 +156,6 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus"
   },
-  //
-  // === Other ===
-  //
-  // Toggle comment selection
   {
     "key": "ctrl+/",
     "command": "editor.action.commentLine",
@@ -183,5 +164,5 @@
   {
     "key": "ctrl+z",
     "command": "workbench.action.toggleZenMode"
-  },
+  }
 ]

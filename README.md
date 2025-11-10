@@ -83,6 +83,12 @@ ZEEDOTS_ROOT=~/zeedots ./scripts/symlinks.zsh --create
 
 If you installed the configs elsewhere, replace `~/zeedots` with your custom path or pass `--root /custom/path`.
 
+### Linting & Validation
+
+- Run `zsh -n scripts/*.zsh` to ensure shell scripts parse cleanly before executing installs.
+- Use `shellcheck` (installed via the Brewfile) for deeper shell diagnostics if Homebrew dependencies are available.
+- Validate Neovim configuration with `stylua --check configs/config/nvim` or `luac -p` to confirm Lua syntax.
+
 ## Symlink Configuration
 
 - `scripts/symlinks/symlinks.conf` contains explicit `source:target` entries for paths that cannot be managed by Stow (for example items under `~/Library`).

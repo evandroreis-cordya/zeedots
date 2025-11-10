@@ -1,5 +1,4 @@
 {
-  // ========= Core editor ergonomics =========
   "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -10,19 +9,14 @@
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.guides.bracketPairs": "active",
-
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.autoSave": "onFocusChange",
-
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-
   "search.mode": "reuseEditor",
   "search.searchEditor.focusResultsOnSearch": true,
   "search.searchOnType": false,
-
-  // ========= Cursor / AI behavior =========
   "editor.inlineSuggest.enabled": true,
   "cursor.cpp.showTabAutocomplete": true,
   "cursor.cpp.showIdleCompletions": true,
@@ -32,13 +26,10 @@
     "markdown",
     "scminput"
   ],
-
-  // ========= TypeScript / Next.js / React (global defaults) =========
   "typescript.tsserver.maxTsServerMemory": 4096,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.jsxAttributeCompletionStyle": "auto",
-
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -62,22 +53,17 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  // ========= Tailwind (frontend will override cssFile) =========
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "typescriptreact": "html",
     "javascriptreact": "html"
   },
-
-  // ========= Python / FastAPI / Flows =========
   "python.defaultInterpreterPath": "./.venv/bin/python",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.autoImportCompletions": true,
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
   "python.terminal.activateEnvironment": true,
-
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -87,11 +73,8 @@
       "source.fixAll.ruff": "explicit"
     }
   },
-
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
-
-  // ========= YAML / config & k8s =========
   "[yaml]": {
     "editor.wordWrap": "on"
   },
@@ -106,8 +89,6 @@
     "https://json.schemastore.org/kustomization.json": "k8s/**/kustomization.yaml",
     "kubernetes": "k8s/**/*.{yaml,yml}"
   },
-
-  // ========= REST Client (shared for backend + flows) =========
   "rest-client.environmentVariables": {
     "$shared": {
       "baseUrl": "http://localhost:8000",
@@ -115,8 +96,6 @@
     }
   },
   "rest-client.requestNameAsFileName": true,
-
-  // ========= SQL / DBs (Postgres etc.) =========
   "sqltools.connections": [
     {
       "name": "PostgreSQL-local",
@@ -130,26 +109,19 @@
     }
   ],
   "sqltools.useNodeRuntime": true,
-
-  // ========= Terminal / tooling =========
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.cwd": "${workspaceFolder}",
   "terminal.integrated.scrollback": 8000,
-
-  // ========= Git / collaboration =========
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "gitlens.hovers.currentLine.enabled": true,
   "gitlens.currentLine.enabled": true,
-
-  // ========= UI / perf =========
   "workbench.statusBar.visible": true,
   "workbench.activityBar.visible": true,
   "window.zoomLevel": 0,
   "security.workspace.trust.untrustedFiles": "open",
-
   "editor.largeFileOptimizations": true,
   "files.watcherExclude": {
     "**/.git/**": true,

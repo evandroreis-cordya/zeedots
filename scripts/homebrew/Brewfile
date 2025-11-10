@@ -360,6 +360,7 @@ brew "readline"
 brew "redis", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+brew "shellcheck"
 brew "rtmpdump"
 brew "rubberband"
 brew "ruby"
@@ -385,6 +386,7 @@ brew "srt"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+brew "stylua"
 brew "svt-av1"
 # Formatting tool for reformatting Swift code
 brew "swiftformat"
