@@ -1,0 +1,71 @@
+==> Installing Apple's CLI tools (prerequisites for Git and Homebrew)...
+==> xcode is already installed
+==> Installing Homebrew...
+==> Homebrew already installed
+==> Installing GNU Stow...
+==> GNU Stow already installed
+==> Installing custom formula: neovim
+[shim] brew install /Volumes/DEVS/repos/zeedots/scripts/homebrew/custom-formulae/neovim.rb
+==> Installing custom cask: rectangle
+[shim] brew install --force --cask /Volumes/DEVS/repos/zeedots/scripts/homebrew/custom-casks/rectangle.rb
+Install Brew bundle? [y/n] ==> The Brewfile's dependencies are already satisfied.
+==> Applying OSX system defaults...
+[shim] defaults write -g ApplePressAndHoldEnabled -bool true
+[shim] defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+[shim] defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+[shim] defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+[shim] defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+[shim] defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+[shim] defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+[shim] defaults write com.apple.finder CreateDesktop -bool true
+[shim] defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+[shim] defaults write com.apple.finder ShowPathbar -bool true
+[shim] defaults write com.apple.finder AppleShowAllFiles -bool true
+[shim] defaults write com.apple.finder ShowStatusBar -bool true
+[shim] defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
+[shim] defaults write com.apple.screencapture type -string png
+[shim] defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 7
+[shim] defaults write com.apple.spaces spans-displays -bool false
+[shim] defaults write com.apple.dock mru-spaces -bool false
+[shim] defaults write com.knollsoft.Rectangle curtainChangeSize -int 2
+[shim] defaults write com.knollsoft.Rectangle almostMaximizeHeight -float 1
+[shim] defaults write com.knollsoft.Rectangle almostMaximizeWidth -float 0.85
+[shim] defaults write com.knollsoft.Rectangle specified -dict-add keyCode -float 45 modifierFlags -float 1966379
+[shim] defaults write com.knollsoft.Rectangle specifiedHeight -float 1055
+[shim] defaults write com.knollsoft.Rectangle specifiedWidth -float 1875
+==> Installing configuration files to /tmp/zeedots-test-ULvRgFku/home
+==> Copying contents from /Volumes/DEVS/repos/zeedots/configs to /tmp/zeedots-test-ULvRgFku/home
+==> Renaming top-level folders to use dot-prefix pattern...
+==> Skipping claude (target /tmp/zeedots-test-ULvRgFku/home/.claude already exists).
+==> Skipping config (target /tmp/zeedots-test-ULvRgFku/home/.config already exists).
+mv: rename /tmp/zeedots-test-ULvRgFku/home/cursor to /tmp/zeedots-test-ULvRgFku/home/.cursor: Operation not permitted
+==> Unable to rename /tmp/zeedots-test-ULvRgFku/home/cursor to /tmp/zeedots-test-ULvRgFku/home/.cursor
+==> Skipping dbeaver (target /tmp/zeedots-test-ULvRgFku/home/.dbeaver already exists).
+==> Skipping docker (target /tmp/zeedots-test-ULvRgFku/home/.docker already exists).
+==> Skipping gnupg (target /tmp/zeedots-test-ULvRgFku/home/.gnupg already exists).
+==> Skipping hushlogin (target /tmp/zeedots-test-ULvRgFku/home/.hushlogin already exists).
+==> Skipping kube (target /tmp/zeedots-test-ULvRgFku/home/.kube already exists).
+==> Skipping lmstudio (target /tmp/zeedots-test-ULvRgFku/home/.lmstudio already exists).
+==> Skipping obsidian (target /tmp/zeedots-test-ULvRgFku/home/.obsidian already exists).
+==> Skipping ssh (target /tmp/zeedots-test-ULvRgFku/home/.ssh already exists).
+==> Skipping storybook (target /tmp/zeedots-test-ULvRgFku/home/.storybook already exists).
+==> Skipping vim (target /tmp/zeedots-test-ULvRgFku/home/.vim already exists).
+==> Skipping zeedots (target /tmp/zeedots-test-ULvRgFku/home/.zeedots already exists).
+==> First-level folder structure:
+claude
+config
+cursor
+dbeaver
+docker
+gnupg
+hushlogin
+kube
+lmstudio
+obsidian
+ssh
+storybook
+vim
+zeedots
+scripts/symlinks.zsh:source:8: no such file or directory: /Volumes/DEVS/repos/zeedots/scripts/utils.sh
+==> Error: Unknown argument ''
+==> Usage: scripts/symlinks.zsh [--create | --delete [--include-files] | --help]

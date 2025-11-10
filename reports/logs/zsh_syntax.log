@@ -1,0 +1,27 @@
+Zsh syntax check
+Generated: Mon Nov 10 01:15:07 -03 2025
+
+==> install.zsh
+    install.zsh:65: parse error near `else'
+
+==> scripts/brew-install-custom.zsh
+    OK
+
+==> scripts/install_configs.zsh
+    OK
+
+==> scripts/osx-defaults.zsh
+    OK
+
+==> scripts/prerequisites.zsh
+    OK
+
+==> scripts/symlinks.zsh
+    OK
+
+==> scripts/utils.zsh
+    OK
+
+==> scripts/vscode-extensions.zsh
+    OK
+

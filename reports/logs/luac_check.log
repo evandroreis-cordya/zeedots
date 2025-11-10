@@ -1,0 +1,87 @@
+luac syntax results
+Generated: Mon Nov 10 01:15:30 -03 2025
+
+==> configs/config/nvim/init.lua
+    OK
+
+==> configs/config/nvim/lua/core/keymaps.lua
+    OK
+
+==> configs/config/nvim/lua/core/options.lua
+    OK
+
+==> configs/config/nvim/lua/core/snippets.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/aerial.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/alpha.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/autocompletion.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/avante.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/bufferline.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/comment.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/database.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/debug.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/gitsigns.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/harpoon.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/indent-blankline.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/lazygit.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/lsp.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/lualine.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/misc.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/neo-tree.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/none-ls.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/oil.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/telescope.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/themes/nord.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/themes/onedark.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/treesitter.lua
+    OK
+
+==> configs/config/nvim/lua/plugins/vim-tmux-navigator.lua
+    OK
+
+==> configs/config/nvim/lua/tools/sql-runner.lua
+    OK
+

@@ -1,0 +1,49 @@
+Diff in configs/config/nvim/lua/plugins/themes/nord.lua:
+1   1    | return {
+2   2    |   'shaunsingh/nord.nvim',
+3        |-  lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    3    |+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+4   4    |   priority = 1000, -- make sure to load this before all the other start plugins
+5   5    |   config = function()
+6   6    |     -- Example config in lua
+7        |-    vim.g.nord_contrast = true                   -- Make sidebars and popup menus like nvim-tree and telescope have a different background
+8        |-    vim.g.nord_borders = false                   -- Enable the border between verticaly split windows visable
+9        |-    vim.g.nord_disable_background = true         -- Disable the setting of background color so that NeoVim can use your terminal background
+10       |-    vim.g.set_cursorline_transparent = false     -- Set the cursorline transparent/visible
+11       |-    vim.g.nord_italic = false                    -- enables/disables italics
+    7    |+    vim.g.nord_contrast = true -- Make sidebars and popup menus like nvim-tree and telescope have a different background
+    8    |+    vim.g.nord_borders = false -- Enable the border between verticaly split windows visable
+    9    |+    vim.g.nord_disable_background = true -- Disable the setting of background color so that NeoVim can use your terminal background
+    10   |+    vim.g.set_cursorline_transparent = false -- Set the cursorline transparent/visible
+    11   |+    vim.g.nord_italic = false -- enables/disables italics
+12  12   |     vim.g.nord_enable_sidebar_background = false -- Re-enables the background of the sidebar if you disabled the background of everything
+13       |-    vim.g.nord_uniform_diff_background = true    -- enables/disables colorful backgrounds when used in diff mode
+14       |-    vim.g.nord_bold = false                      -- enables/disables bold
+    13   |+    vim.g.nord_uniform_diff_background = true -- enables/disables colorful backgrounds when used in diff mode
+    14   |+    vim.g.nord_bold = false -- enables/disables bold
+15  15   | 
+16  16   |     -- Load the colorscheme
+17  17   |     require('nord').set()
+Diff in configs/config/nvim/lua/plugins/none-ls.lua:
+7   7    |   },
+8   8    |   config = function()
+9   9    |     local null_ls = require 'null-ls'
+10       |-    local formatting = null_ls.builtins.formatting   -- to setup formatters
+    10   |+    local formatting = null_ls.builtins.formatting -- to setup formatters
+11  11   |     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
+12  12   | 
+13  13   |     -- list of formatters & linters for mason to install
+Diff in configs/config/nvim/lua/plugins/autocompletion.lua:
+73  73   |       --     documentation = cmp.config.window.bordered(),
+74  74   |       -- },
+75  75   |       mapping = cmp.mapping.preset.insert {
+76       |-        ['<C-j>'] = cmp.mapping.select_next_item(),       -- Select the [n]ext item
+77       |-        ['<C-k>'] = cmp.mapping.select_prev_item(),       -- Select the [p]revious item
+    76   |+        ['<C-j>'] = cmp.mapping.select_next_item(), -- Select the [n]ext item
+    77   |+        ['<C-k>'] = cmp.mapping.select_prev_item(), -- Select the [p]revious item
+78  78   |         ['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept the completion with Enter.
+79       |-        ['<C-c>'] = cmp.mapping.complete {},              -- Manually trigger a completion from nvim-cmp.
+    79   |+        ['<C-c>'] = cmp.mapping.complete {}, -- Manually trigger a completion from nvim-cmp.
+80  80   | 
+81  81   |         -- Think of <c-l> as moving to the right of your snippet expansion.
+82  82   |         --  So if you have a snippet that's like:

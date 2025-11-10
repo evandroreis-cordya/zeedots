@@ -1,0 +1,20 @@
+Stow package source audit
+Generated: Mon Nov 10 01:26:51 -03 2025
+
+.claude -> directory
+.config -> directory
+.cursor -> directory
+.dbeaver -> directory
+.docker -> directory
+.gnupg -> directory
+.hushlogin -> directory
+.kube -> directory
+.lmstudio -> directory
+.obsidian -> directory
+.ssh -> directory
+.storybook -> directory
+.vim -> directory
+.zshenv -> missing
+.zshrc -> missing
+.profile -> missing
+.gitconfig -> missing

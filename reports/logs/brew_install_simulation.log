@@ -1,0 +1,7 @@
+==> Installing custom formula: neovim
+[shim] brew install /Volumes/DEVS/repos/zeedots/scripts/homebrew/custom-formulae/neovim.rb
+==> Installing custom cask: rectangle
+[shim] brew install --force --cask /Volumes/DEVS/repos/zeedots/scripts/homebrew/custom-casks/rectangle.rb
+Install Brew bundle? [y/n] ==> Installing custom cask: rectangle
+[shim] brew install --force --cask /Volumes/DEVS/repos/zeedots/scripts/homebrew/custom-casks/rectangle.rb
+==> The Brewfile's dependencies are already satisfied.

@@ -1,0 +1,120 @@
+ShellCheck results
+Generated: Mon Nov 10 01:15:14 -03 2025
+
+==> install.zsh
+    
+    In install.zsh line 43:
+    if [[ "$overwrite_zeedots" == "y" ]]; then
+                                          ^-- SC1009 (info): The mentioned syntax error was in this then clause.
+    
+    
+    In install.zsh line 63:
+        if command stow --dir="$target_root" --target="$HOME" --restow  then
+        ^-- SC1049 (error): Did you forget the 'then' for this 'if'?
+        ^-- SC1073 (error): Couldn't parse this if expression. Fix to allow more checks.
+                                                                        ^-- SC1010 (warning): Use semicolon or linefeed before 'then' (or quote to make it literal).
+    
+    
+    In install.zsh line 65:
+        else
+        ^-- SC1050 (error): Expected 'then'.
+            ^-- SC1072 (error): Unexpected keyword/token. Fix any mentioned problems and try again.
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC1049 -- Did you forget the 'then' for thi...
+      https://www.shellcheck.net/wiki/SC1050 -- Expected 'then'.
+      https://www.shellcheck.net/wiki/SC1010 -- Use semicolon or linefeed before ...
+
+==> scripts/brew-install-custom.zsh
+    
+    In scripts/brew-install-custom.zsh line 3:
+    SCRIPT_PATH="${(%):-%N}"
+                   ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    
+    In scripts/brew-install-custom.zsh line 8:
+    . "$SCRIPT_DIR/utils.zsh"
+      ^---------------------^ SC1091 (info): Not following: ./utils.zsh was not specified as input (see shellcheck -x).
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.zsh was no...
+
+==> scripts/install_configs.zsh
+    
+    In scripts/install_configs.zsh line 3:
+    SCRIPT_PATH="${(%):-%N}"
+                   ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    
+    In scripts/install_configs.zsh line 8:
+    . "$SCRIPT_DIR/utils.zsh"
+      ^---------------------^ SC1091 (info): Not following: ./utils.zsh was not specified as input (see shellcheck -x).
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.zsh was no...
+
+==> scripts/osx-defaults.zsh
+    
+    In scripts/osx-defaults.zsh line 3:
+    SCRIPT_PATH="${(%):-%N}"
+                   ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    
+    In scripts/osx-defaults.zsh line 8:
+    . "$SCRIPT_DIR/utils.zsh"
+      ^---------------------^ SC1091 (info): Not following: ./utils.zsh was not specified as input (see shellcheck -x).
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.zsh was no...
+
+==> scripts/prerequisites.zsh
+    
+    In scripts/prerequisites.zsh line 3:
+    SCRIPT_PATH="${(%):-%N}"
+                   ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    
+    In scripts/prerequisites.zsh line 8:
+    . "$SCRIPT_DIR/utils.zsh"
+      ^---------------------^ SC1091 (info): Not following: ./utils.zsh was not specified as input (see shellcheck -x).
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.zsh was no...
+
+==> scripts/symlinks.zsh
+    
+    In scripts/symlinks.zsh line 8:
+    source "$SCRIPT_DIR/utils.sh"
+           ^--------------------^ SC1091 (info): Not following: ./utils.sh was not specified as input (see shellcheck -x).
+    
+    
+    In scripts/symlinks.zsh line 86:
+    if [[ "${(%):-%N}" == "$0" ]]; then
+             ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.sh was not...
+
+==> scripts/utils.zsh
+    OK
+
+==> scripts/vscode-extensions.zsh
+    
+    In scripts/vscode-extensions.zsh line 3:
+    SCRIPT_PATH="${(%):-%N}"
+                   ^-----^ SC2296 (error): Parameter expansions can't start with (. Double check syntax.
+    
+    
+    In scripts/vscode-extensions.zsh line 8:
+    . "$SCRIPT_DIR/utils.zsh"
+      ^---------------------^ SC1091 (info): Not following: ./utils.zsh was not specified as input (see shellcheck -x).
+    
+    For more information:
+      https://www.shellcheck.net/wiki/SC2296 -- Parameter expansions can't start ...
+      https://www.shellcheck.net/wiki/SC1091 -- Not following: ./utils.zsh was no...
+

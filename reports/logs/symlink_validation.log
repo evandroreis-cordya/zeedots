@@ -1,0 +1,23 @@
+Symlink source/target validation
+Generated: Mon Nov 10 01:25:03 -03 2025
+
+Source: /Volumes/DEVS/repos/zeedots/scripts/symlinks/vscode/settings.json
+Target: /tmp/zeedots-test-ULvRgFku/home/Library/Application Support/Code/User/settings.json
+    source: OK
+
+Source: /Volumes/DEVS/repos/zeedots/scripts/symlinks/vscode/keybindings.json
+Target: /tmp/zeedots-test-ULvRgFku/home/Library/Application Support/Code/User/keybindings.json
+    source: OK
+
+Source: /Volumes/DEVS/repos/zeedots/scripts/symlinks/rectangle/RectangleConfig.json
+Target: /tmp/zeedots-test-ULvRgFku/home/Library/Application Support/Rectangle/RectangleConfig.json
+    source: OK
+
+Source: /Volumes/DEVS/repos/zeedots/scripts/symlinks/iterm2/com.googlecode.iterm2.plist
+Target: /tmp/zeedots-test-ULvRgFku/home/Library/Preferences/com.googlecode.iterm2.plist
+    source: OK
+
+Source: /Volumes/DEVS/repos/zeedots/scripts/symlinks/iterm2/Profiles.json
+Target: /tmp/zeedots-test-ULvRgFku/home/Library/Application Support/iTerm2/DynamicProfiles/Profiles.json
+    source: OK
+

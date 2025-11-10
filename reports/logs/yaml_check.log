@@ -1,0 +1,9 @@
+YAML validation (yq eval)
+Generated: Mon Nov 10 01:15:42 -03 2025
+
+==> configs/config/gh/config.yml
+    OK
+
+==> configs/config/gh/hosts.yml
+    OK
+

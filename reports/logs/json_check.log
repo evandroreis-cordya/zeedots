@@ -1,0 +1,39 @@
+JSON validation (jq)
+Generated: Mon Nov 10 01:15:45 -03 2025
+
+==> configs/config/karabiner/karabiner.json
+    OK
+
+==> configs/config/nvim/lazy-lock.json
+    OK
+
+==> configs/config/op/plugins/aws.json
+    OK
+
+==> configs/config/op/plugins/used_items/aws.json
+    OK
+
+==> configs/config/uv/uv-receipt.json
+    OK
+
+==> configs/cursor/mcp.json
+    OK
+
+==> configs/cursor/settings.json
+    OK
+
+==> configs/cursor/worktrees.json
+    OK
+
+==> configs/docker/config.json
+    OK
+
+==> configs/docker/daemon.json
+    OK
+
+==> configs/lmstudio/mcp.json
+    OK
+
+==> configs/storybook/settings.json
+    OK
+
